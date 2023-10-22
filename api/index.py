@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 local_db_config = {
     "host": "localhost",
-    "user": "your_local_user",
-    "password": "your_local_password",
-    "database": "your_local_db"
+    "user": "root_dev",
+    "password": "D3b1an!?",
+    "database": "sample"
 }
 
 planet_scale_db_config = {
@@ -24,9 +24,9 @@ def home():
 @app.route('/fetch-data')
 def fetch_data():
     # Connect to Local MySQL
-    db = mysql.connector.connect(**planet_scale_db_config)
+    db = mysql.connector.connect(**local_db_config)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM Comment")
+    cursor.execute("SELECT * FROM books")
     records = cursor.fetchall()
     db.close()
 
