@@ -19,7 +19,7 @@ planet_scale_db_config = {
 
 @app.route('/')
 def home():
-    return 'From Locla!'
+    return 'Fas!'
 
 @app.route('/fetch-data')
 def fetch_data():
