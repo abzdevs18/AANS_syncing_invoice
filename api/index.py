@@ -94,6 +94,3 @@ def sync_to_planetscale():
 def convert_record_to_dict(record):
     # Convert your record to a dictionary or any other serialization format
     pass
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, ssl_context=('path_to_cert.pem', 'path_to_key.pem'))
