@@ -24,7 +24,7 @@ def home():
 @app.route('/fetch-data')
 def fetch_data():
     # Connect to Local MySQL
-    db = mysql.connector.connect(**local_db_config)
+    db = mysql.connector.connect(**planet_scale_db_config)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM Comment")
     records = cursor.fetchall()
